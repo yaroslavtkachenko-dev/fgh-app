@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FGH — Terms of Service</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&display=swap');
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a14;
+            color: #c8c8d4;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .bg {
+            position: fixed; inset: 0; z-index: -1;
+            background:
+                radial-gradient(ellipse at 20% 0%, rgba(99,102,241,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 100%, rgba(99,102,241,0.05) 0%, transparent 50%),
+                #0a0a14;
+        }
+
+        header {
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            padding: 1.25rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            max-width: 800px; margin: 0 auto;
+        }
+
+        .logo {
+            font-weight: 700; font-size: 1.1rem;
+            color: #a5a8f0;
+            letter-spacing: -0.02em;
+        }
+
+        .lang-switch {
+            display: flex; gap: 0; border-radius: 8px; overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .lang-btn {
+            background: transparent; border: none; color: #666;
+            padding: 0.4rem 0.85rem; font-size: 0.8rem; cursor: pointer;
+            font-family: inherit; font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: rgba(99,102,241,0.2); color: #a5a8f0;
+        }
+
+        .lang-btn:hover:not(.active) { color: #999; }
+
+        main {
+            max-width: 800px; margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+
+        h1 {
+            font-size: 2rem; font-weight: 700; color: #e8e8f0;
+            margin-bottom: 0.5rem; letter-spacing: -0.03em;
+        }
+
+        .date { font-size: 0.85rem; color: #666; margin-bottom: 2.5rem; }
+
+        h2 {
+            font-size: 1.15rem; font-weight: 700; color: #d0d0dc;
+            margin: 2.2rem 0 0.8rem; letter-spacing: -0.01em;
+        }
+
+        p { margin-bottom: 1rem; font-size: 0.95rem; }
+
+        ul {
+            margin: 0.5rem 0 1rem 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        li { margin-bottom: 0.4rem; }
+
+        strong { color: #d8d8e4; font-weight: 600; }
+
+        a { color: #a5a8f0; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 1.5rem 2rem;
+            max-width: 800px; margin: 0 auto;
+            font-size: 0.8rem; color: #444;
+            text-align: center;
+        }
+
+        .content { display: none; }
+        .content.active { display: block; }
+
+        @media (max-width: 600px) {
+            main { padding: 2rem 1.25rem 4rem; }
+            h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+
+    <header>
+        <div class="logo">FGH</div>
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+            <button class="lang-btn" onclick="switchLang('uk')">UK</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="en" class="content active">
+            <h1>Terms of Service</h1>
+            <p class="date">Effective: February 6, 2026</p>
+
+            <h2>1. Acceptance</h2>
+            <p>By downloading, installing, or using FGH ("the App"), you agree to these Terms of Service. If you do not agree, do not use the App.</p>
+
+            <h2>2. Description of Service</h2>
+            <p>FGH is a macOS utility that provides automatic clipboard text cleaning, clipboard history management, and menu bar icon organization. The App operates entirely on your local device.</p>
+
+            <h2>3. License</h2>
+            <p>Subject to these Terms, you are granted a limited, non-exclusive, non-transferable license to use the App on any Mac computer that you own or control, in accordance with the Apple App Store terms.</p>
+
+            <h2>4. Restrictions</h2>
+            <p>You may not:</p>
+            <ul>
+                <li>Reverse engineer, decompile, or disassemble the App</li>
+                <li>Modify, adapt, or create derivative works based on the App</li>
+                <li>Distribute, sublicense, lease, or lend the App to third parties</li>
+                <li>Use the App for any unlawful purpose</li>
+            </ul>
+
+            <h2>5. Clipboard Access</h2>
+            <p>The App monitors and modifies your macOS clipboard to provide its core functionality. By using the App, you acknowledge that it will read clipboard content to apply text cleaning filters, store clipboard history when this feature is enabled, and modify clipboard content to remove formatting and tracking parameters. The App automatically detects and skips sensitive content from password managers.</p>
+
+            <h2>6. Data and Privacy</h2>
+            <p>All data processed by the App remains on your device. No data is transmitted to external servers. For full details, see our <a href="privacy.html">Privacy Policy</a>.</p>
+
+            <h2>7. Disclaimer of Warranties</h2>
+            <p>The App is provided "as is" without warranties of any kind, either express or implied. The developer does not warrant that the App will be error-free or uninterrupted, that defects will be corrected, or that the App will meet your specific requirements.</p>
+
+            <h2>8. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by applicable law, the developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of data, arising out of or in connection with your use of the App.</p>
+
+            <h2>9. Clipboard Data Risk</h2>
+            <p>While FGH includes safeguards to detect and skip sensitive content (such as passwords), no automated detection system is perfect. You acknowledge that using clipboard management software involves inherent risks and agree to use the App at your own discretion.</p>
+
+            <h2>10. Updates</h2>
+            <p>The developer may release updates to the App from time to time. These Terms apply to all updates unless a separate agreement accompanies such updates.</p>
+
+            <h2>11. Termination</h2>
+            <p>You may stop using the App at any time by uninstalling it. The developer reserves the right to discontinue the App at any time.</p>
+
+            <h2>12. Changes to Terms</h2>
+            <p>These Terms may be updated from time to time. Continued use of the App after changes constitutes acceptance of the revised Terms.</p>
+
+            <h2>13. Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of Ukraine.</p>
+
+            <h2>14. Contact</h2>
+            <p>Questions about these Terms: <a href="mailto:your.email@gmail.com">your.email@gmail.com</a></p>
+        </div>
+
+        <div id="uk" class="content">
+            <h1>Умови використання</h1>
+            <p class="date">Дата набуття чинності: 6 лютого 2026</p>
+
+            <h2>1. Прийняття умов</h2>
+            <p>Завантажуючи, встановлюючи або використовуючи FGH ("Додаток"), ви погоджуєтесь з цими Умовами використання. Якщо ви не погоджуєтесь, не використовуйте Додаток.</p>
+
+            <h2>2. Опис сервісу</h2>
+            <p>FGH — утиліта для macOS, що забезпечує автоматичне очищення тексту буфера обміну, керування історією буфера та організацію іконок menu bar. Додаток працює виключно на вашому локальному пристрої.</p>
+
+            <h2>3. Ліцензія</h2>
+            <p>Відповідно до цих Умов, вам надається обмежена, невиключна, непередавана ліцензія на використання Додатку на будь-якому комп'ютері Mac, яким ви володієте або керуєте, відповідно до умов Apple App Store.</p>
+
+            <h2>4. Обмеження</h2>
+            <p>Ви не маєте права:</p>
+            <ul>
+                <li>Здійснювати зворотну розробку, декомпіляцію або дизасемблювання Додатку</li>
+                <li>Модифікувати, адаптувати або створювати похідні роботи на основі Додатку</li>
+                <li>Розповсюджувати, субліцензувати, здавати в оренду або передавати Додаток третім особам</li>
+                <li>Використовувати Додаток у будь-яких незаконних цілях</li>
+            </ul>
+
+            <h2>5. Доступ до буфера обміну</h2>
+            <p>Додаток моніторить та модифікує буфер обміну macOS для забезпечення своєї основної функціональності. Використовуючи Додаток, ви визнаєте, що він буде зчитувати вміст буфера обміну для застосування фільтрів очищення тексту, зберігати історію буфера обміну, коли цю функцію увімкнено, та модифікувати вміст буфера для видалення форматування та параметрів відстеження. Додаток автоматично розпізнає та пропускає чутливий вміст з менеджерів паролів.</p>
+
+            <h2>6. Дані та конфіденційність</h2>
+            <p>Усі дані, оброблені Додатком, залишаються на вашому пристрої. Жодні дані не передаються на зовнішні сервери. Повні деталі — у нашій <a href="privacy.html">Політиці конфіденційності</a>.</p>
+
+            <h2>7. Відмова від гарантій</h2>
+            <p>Додаток надається "як є" без будь-яких гарантій, явних або неявних. Розробник не гарантує, що Додаток буде безпомилковим або безперебійним, що дефекти будуть виправлені, або що Додаток відповідатиме вашим конкретним вимогам.</p>
+
+            <h2>8. Обмеження відповідальності</h2>
+            <p>У максимальному обсязі, дозволеному чинним законодавством, розробник не несе відповідальності за будь-які непрямі, випадкові, спеціальні, наслідкові або штрафні збитки, включаючи, але не обмежуючись, втрату даних, що виникли у зв'язку з використанням Додатку.</p>
+
+            <h2>9. Ризики даних буфера обміну</h2>
+            <p>Хоча FGH містить засоби захисту для виявлення та пропуску чутливого вмісту (наприклад, паролів), жодна автоматизована система виявлення не є досконалою. Ви визнаєте, що використання програмного забезпечення для керування буфером обміну пов'язане з притаманними ризиками, та погоджуєтесь використовувати Додаток на власний розсуд.</p>
+
+            <h2>10. Оновлення</h2>
+            <p>Розробник може час від часу випускати оновлення Додатку. Ці Умови застосовуються до всіх оновлень, якщо окрема угода не супроводжує такі оновлення.</p>
+
+            <h2>11. Припинення</h2>
+            <p>Ви можете припинити використання Додатку у будь-який час, видаливши його. Розробник залишає за собою право припинити підтримку Додатку у будь-який час.</p>
+
+            <h2>12. Зміни умов</h2>
+            <p>Ці Умови можуть оновлюватися час від часу. Продовження використання Додатку після змін означає прийняття оновлених Умов.</p>
+
+            <h2>13. Застосовне право</h2>
+            <p>Ці Умови регулюються та тлумачаться відповідно до законодавства України.</p>
+
+            <h2>14. Контакти</h2>
+            <p>Питання щодо цих Умов: <a href="mailto:your.email@gmail.com">your.email@gmail.com</a></p>
+        </div>
+    </main>
+
+    <footer>
+        Made in Ukraine
+    </footer>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            document.querySelector(`[onclick="switchLang('${lang}')"]`).classList.add('active');
+            document.documentElement.lang = lang === 'uk' ? 'uk' : 'en';
+        }
+    </script>
+</body>
+</html>

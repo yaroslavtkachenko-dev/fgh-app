@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FGH — Privacy Policy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&display=swap');
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a14;
+            color: #c8c8d4;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .bg {
+            position: fixed; inset: 0; z-index: -1;
+            background:
+                radial-gradient(ellipse at 20% 0%, rgba(99,102,241,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 100%, rgba(99,102,241,0.05) 0%, transparent 50%),
+                #0a0a14;
+        }
+
+        header {
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            padding: 1.25rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            max-width: 800px; margin: 0 auto;
+        }
+
+        .logo {
+            font-weight: 700; font-size: 1.1rem;
+            color: #a5a8f0;
+            letter-spacing: -0.02em;
+        }
+
+        .lang-switch {
+            display: flex; gap: 0; border-radius: 8px; overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .lang-btn {
+            background: transparent; border: none; color: #666;
+            padding: 0.4rem 0.85rem; font-size: 0.8rem; cursor: pointer;
+            font-family: inherit; font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: rgba(99,102,241,0.2); color: #a5a8f0;
+        }
+
+        .lang-btn:hover:not(.active) { color: #999; }
+
+        main {
+            max-width: 800px; margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+
+        h1 {
+            font-size: 2rem; font-weight: 700; color: #e8e8f0;
+            margin-bottom: 0.5rem; letter-spacing: -0.03em;
+        }
+
+        .date { font-size: 0.85rem; color: #666; margin-bottom: 2.5rem; }
+
+        h2 {
+            font-size: 1.15rem; font-weight: 700; color: #d0d0dc;
+            margin: 2.2rem 0 0.8rem; letter-spacing: -0.01em;
+        }
+
+        p { margin-bottom: 1rem; font-size: 0.95rem; }
+
+        ul {
+            margin: 0.5rem 0 1rem 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        li { margin-bottom: 0.4rem; }
+
+        strong { color: #d8d8e4; font-weight: 600; }
+
+        a { color: #a5a8f0; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .badge {
+            display: inline-block;
+            background: rgba(52,211,153,0.1);
+            color: #34d399;
+            font-size: 0.75rem; font-weight: 600;
+            padding: 0.3rem 0.7rem; border-radius: 6px;
+            margin-bottom: 2rem; letter-spacing: 0.03em;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 1.5rem 2rem;
+            max-width: 800px; margin: 0 auto;
+            font-size: 0.8rem; color: #444;
+            text-align: center;
+        }
+
+        .content { display: none; }
+        .content.active { display: block; }
+
+        @media (max-width: 600px) {
+            main { padding: 2rem 1.25rem 4rem; }
+            h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+
+    <header>
+        <div class="logo">FGH</div>
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+            <button class="lang-btn" onclick="switchLang('uk')">UK</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="en" class="content active">
+            <h1>Privacy Policy</h1>
+            <p class="date">Effective: February 6, 2026</p>
+            <span class="badge">NO DATA COLLECTED</span>
+
+            <h2>Overview</h2>
+            <p>FGH ("Format Gone Helper") is a macOS menu bar utility for clipboard text cleaning, clipboard history management, and menu bar icon organization. Your privacy is fundamental to how this app is designed.</p>
+            <p><strong>FGH does not collect, transmit, or share any personal data.</strong> The app has no analytics, no telemetry, no network connections, and no user accounts.</p>
+
+            <h2>Data That Stays on Your Device</h2>
+            <p>FGH processes and stores the following data exclusively on your Mac:</p>
+            <ul>
+                <li><strong>Clipboard content</strong> — monitored locally to apply text cleaning filters. Content is processed in memory and never transmitted anywhere.</li>
+                <li><strong>Clipboard history</strong> — when enabled, up to 100 recent text items are stored in the macOS Keychain (encrypted, device-only). History items are automatically deleted after 72 hours.</li>
+                <li><strong>App settings</strong> — your preferences (enabled filters, theme, etc.) are stored locally via macOS UserDefaults.</li>
+            </ul>
+
+            <h2>Sensitive Content Protection</h2>
+            <p>FGH automatically detects and skips sensitive clipboard content. Items copied from password managers (1Password, Bitwarden, LastPass, Dashlane, KeePassXC, Proton Pass, NordPass, RoboForm, Enpass) are never processed or stored. Binary content such as images and files is also ignored.</p>
+
+            <h2>Encryption</h2>
+            <p>Clipboard history is encrypted using AES-256-GCM before being stored in the macOS Keychain. Encryption keys are generated on your device and never leave it.</p>
+
+            <h2>No Network Access</h2>
+            <p>FGH does not connect to the internet. The app contains no networking code, no API calls, no update checks, and no crash reporting. Nothing leaves your Mac.</p>
+
+            <h2>Third-Party Services</h2>
+            <p>FGH uses no third-party SDKs, analytics frameworks, or external services of any kind.</p>
+
+            <h2>Data Deletion</h2>
+            <p>You can delete all FGH data at any time via Settings > "Delete All Data". This permanently removes clipboard history, encryption keys, and all settings from your Mac. You can also uninstall the app, which removes all associated data.</p>
+
+            <h2>Children's Privacy</h2>
+            <p>FGH does not knowingly collect any information from anyone, including children under 13.</p>
+
+            <h2>Changes</h2>
+            <p>If this policy is updated, the new version will be posted at this URL with a revised effective date.</p>
+
+            <h2>Contact</h2>
+            <p>Questions about this policy: <a href="mailto:your.email@gmail.com">your.email@gmail.com</a></p>
+        </div>
+
+        <div id="uk" class="content">
+            <h1>Політика конфіденційності</h1>
+            <p class="date">Дата набуття чинності: 6 лютого 2026</p>
+            <span class="badge">ДАНІ НЕ ЗБИРАЮТЬСЯ</span>
+
+            <h2>Огляд</h2>
+            <p>FGH ("Format Gone Helper") — утиліта для macOS у menu bar для очищення тексту буфера обміну, керування історією буфера та організації іконок menu bar. Ваша конфіденційність є основою архітектури цього додатку.</p>
+            <p><strong>FGH не збирає, не передає і не надає нікому жодних персональних даних.</strong> Додаток не містить аналітики, телеметрії, мережевих з'єднань та облікових записів користувачів.</p>
+
+            <h2>Дані, що залишаються на вашому пристрої</h2>
+            <p>FGH обробляє та зберігає наступні дані виключно на вашому Mac:</p>
+            <ul>
+                <li><strong>Вміст буфера обміну</strong> — моніториться локально для застосування фільтрів очищення тексту. Вміст обробляється в пам'яті та ніколи не передається нікуди.</li>
+                <li><strong>Історія буфера обміну</strong> — коли увімкнено, до 100 текстових елементів зберігаються у macOS Keychain (зашифровано, лише на пристрої). Елементи історії автоматично видаляються через 72 години.</li>
+                <li><strong>Налаштування додатку</strong> — ваші налаштування (увімкнені фільтри, тема тощо) зберігаються локально через macOS UserDefaults.</li>
+            </ul>
+
+            <h2>Захист чутливого вмісту</h2>
+            <p>FGH автоматично розпізнає та пропускає чутливий вміст буфера обміну. Елементи, скопійовані з менеджерів паролів (1Password, Bitwarden, LastPass, Dashlane, KeePassXC, Proton Pass, NordPass, RoboForm, Enpass), ніколи не обробляються та не зберігаються. Бінарний вміст (зображення, файли) також ігнорується.</p>
+
+            <h2>Шифрування</h2>
+            <p>Історія буфера обміну шифрується за допомогою AES-256-GCM перед збереженням у macOS Keychain. Ключі шифрування генеруються на вашому пристрої та ніколи його не залишають.</p>
+
+            <h2>Відсутність мережевого доступу</h2>
+            <p>FGH не підключається до інтернету. Додаток не містить мережевого коду, API-викликів, перевірок оновлень та звітів про збої. Нічого не залишає ваш Mac.</p>
+
+            <h2>Сторонні сервіси</h2>
+            <p>FGH не використовує жодних сторонніх SDK, фреймворків аналітики або зовнішніх сервісів будь-якого виду.</p>
+
+            <h2>Видалення даних</h2>
+            <p>Ви можете видалити всі дані FGH у будь-який момент через Налаштування > "Видалити всі дані". Це безповоротно видаляє історію буфера, ключі шифрування та всі налаштування з вашого Mac. Ви також можете видалити додаток, що видалить усі пов'язані дані.</p>
+
+            <h2>Конфіденційність дітей</h2>
+            <p>FGH свідомо не збирає жодної інформації від будь-кого, включаючи дітей до 13 років.</p>
+
+            <h2>Зміни</h2>
+            <p>Якщо ця політика буде оновлена, нова версія буде розміщена за цією URL-адресою з оновленою датою набуття чинності.</p>
+
+            <h2>Контакти</h2>
+            <p>Питання щодо цієї політики: <a href="mailto:your.email@gmail.com">your.email@gmail.com</a></p>
+        </div>
+    </main>
+
+    <footer>
+        Made in Ukraine
+    </footer>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            document.querySelector(`[onclick="switchLang('${lang}')"]`).classList.add('active');
+            document.documentElement.lang = lang === 'uk' ? 'uk' : 'en';
+        }
+    </script>
+</body>
+</html>
